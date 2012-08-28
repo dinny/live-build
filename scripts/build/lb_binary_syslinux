@@ -192,6 +192,10 @@ case "${LB_BUILD_WITH_CHROOT}" in
 		esac
 
 		mv chroot/root/$(basename ${_SOURCE}).tmp ${_TARGET}
+		
+		# Move binary vmlinuz and initrd.img	
+		mv binary/live/vmlinuz-* binary/live/vmlinuz
+		mv binary/live/initrd.img-* binary/live/initrd.img
 		;;
 
 	false)
